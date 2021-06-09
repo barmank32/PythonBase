@@ -4,7 +4,7 @@
 """
 
 
-def power_numbers(numbers):
+def power_numbers(*numbers):
     """
     функция, которая принимает N целых чисел,
     и возвращает список квадратов этих чисел
