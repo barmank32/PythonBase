@@ -49,5 +49,3 @@ def filter_numbers(list_number, *arg):
             if d == i :
                 mylist.append(i)
     return mylist
-
-print (filter_numbers([1, 2, 3], ODD))
