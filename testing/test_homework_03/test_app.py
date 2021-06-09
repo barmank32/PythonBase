@@ -52,7 +52,8 @@ def build_image(docker_client):
 @pytest.fixture
 def run_image(docker_client, build_image):
     from docker.models.containers import Container
-    container: Container = docker_client.containers.run(build_image, detach=True, ports={PORT: LOCAL_PORT})
+    container: Container = docker_client.containers.run(
+        build_image, detach=True, ports={PORT: LOCAL_PORT})
     print("running docker container detached")
     # give some time to for the web app to start
     sleep(1)
@@ -64,6 +65,7 @@ def run_image(docker_client, build_image):
 
 def test_build_and_run_app(run_image):
     print("sending request to the image")
-    resp: requests.Response = requests.get(f"http://localhost:{LOCAL_PORT}/ping/")
+    resp: requests.Response = requests.get(
+        f"http://localhost:{LOCAL_PORT}/ping/")
     assert resp.status_code == 200
     assert resp.json() == {"message": "pong"}
