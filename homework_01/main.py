@@ -36,9 +36,7 @@ def filter_numbers(list_number, *arg):
     """
     mylist = []
     if arg[0] == 'odd':
-        for i in list_number:
-            if i%2 :
-                mylist.append(i)
+        mylist = list(filter(lambda x: x%2, list_number))
     elif arg[0] == 'even':
         for i in list_number:
             if not i%2 :
@@ -51,3 +49,5 @@ def filter_numbers(list_number, *arg):
             if d == i :
                 mylist.append(i)
     return mylist
+
+print (filter_numbers([1, 2, 3], ODD))
