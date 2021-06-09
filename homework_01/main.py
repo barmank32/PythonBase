@@ -23,7 +23,7 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def filter_numbers():
+def filter_numbers(list_number, *arg):
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
@@ -34,4 +34,20 @@ def filter_numbers():
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """
-    pass
+    mylist = []
+    if arg[0] == 'odd':
+        for i in list_number:
+            if i%2 :
+                mylist.append(i)
+    elif arg[0] == 'even':
+        for i in list_number:
+            if not i%2 :
+                mylist.append(i)
+    elif arg[0] == 'prime':
+        for i in list_number:
+            d = 2
+            while i%d != 0:
+                d += 1
+            if d == i :
+                mylist.append(i)
+    return mylist
