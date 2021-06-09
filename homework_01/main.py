@@ -36,16 +36,16 @@ def filter_numbers(list_number, *arg):
     """
     mylist = []
     if arg[0] == 'odd':
-        mylist = list(filter(lambda x: x%2, list_number))
+        mylist = list(filter(lambda x: x % 2, list_number))
     elif arg[0] == 'even':
         for i in list_number:
-            if not i%2 :
+            if not i % 2:
                 mylist.append(i)
     elif arg[0] == 'prime':
         for i in list_number:
             d = 2
-            while i%d != 0:
+            while i % d != 0:
                 d += 1
-            if d == i :
+            if d == i:
                 mylist.append(i)
     return mylist
