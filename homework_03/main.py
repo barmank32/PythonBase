@@ -11,4 +11,4 @@ async def read_root():
 @app.get("/ping/")
 async def get_status():
     """Get status of messaging server."""
-    return {"status": "pong"}
+    return {"message": "pong"}
