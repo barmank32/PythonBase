@@ -1,0 +1,4 @@
+aiohttp==3.7.4.post0
+asyncio==3.4.3
+asyncpg==0.24.0
+SQLAlchemy==1.4.23
