@@ -27,6 +27,7 @@ class User(Base):
     name = Column(String(50))
     username = Column(String(50), unique=True)
     email = Column(String(50), nullable=False)
+    posts = relationship("Post")
 
 
 class Post(Base):
