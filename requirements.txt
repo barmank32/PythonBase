@@ -1,0 +1,4 @@
+aiohttp
+asyncio
+asyncpg
+SQLAlchemy==1.4.23
