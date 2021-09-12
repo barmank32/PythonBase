@@ -12,13 +12,7 @@ async def fetch_json(session: ClientSession, url: str) -> dict:
         return await response.json()
 
 
-async def get_users() -> dict:
+async def get_json(url: str) -> dict:
     async with ClientSession() as session:
-        result = await fetch_json(session, USERS_DATA_URL)
-    return result
-
-
-async def get_posts() -> dict:
-    async with ClientSession() as session:
-        result = await fetch_json(session, POSTS_DATA_URL)
+        result = await fetch_json(session, url)
     return result

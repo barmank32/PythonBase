@@ -27,7 +27,7 @@ class User(Base):
     name = Column(String(50))
     username = Column(String(50), unique=True)
     email = Column(String(50), nullable=False)
-    posts = relationship("Post")
+    posts = relationship("Post", back_populates='user')
 
 
 class Post(Base):
@@ -36,4 +36,4 @@ class Post(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     title = Column(Text, nullable=False, default="")
     body = Column(Text, nullable=False, default="")
-    user = relationship("User")
+    user = relationship("User", back_populates='posts')
