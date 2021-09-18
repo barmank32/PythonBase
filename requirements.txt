@@ -1,4 +1,1 @@
-aiohttp
-asyncio
-asyncpg
-SQLAlchemy==1.4.23
+Flask==2.0.1
