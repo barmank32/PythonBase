@@ -13,17 +13,12 @@ PG_USER = os.environ.get("PG_USER")
 PG_PASS = os.environ.get("PG_PASS")
 PG_HOST = os.environ.get("PG_HOST")
 PG_DB = os.environ.get("PG_DB")
-# PG_USER = "postgres"
-# PG_PASS = "password"
-# PG_HOST = "127.0.0.1"
-# PG_DB = "postgres"
 PG_CONN_URI = 'postgresql://{}:{}@{}/{}'.format(PG_USER, PG_PASS, PG_HOST, PG_DB)
 
 app = Flask(__name__)
 db = SQLAlchemy()
 
 app.config.update(
-    # SQLALCHEMY_DATABASE_URI="sqlite:///database.db",
     SQLALCHEMY_DATABASE_URI=PG_CONN_URI,
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
 )
