@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  app:
+    image: app
+    build:
+      context: .
+#    image: tiangolo/uwsgi-nginx-flask:python3.8
+    volumes:
+      - ./app:/app
+    environment:
+      PG_USER: "postgres"
+      PG_PASS: "password"
+      PG_HOST: "pg"
+      PG_DB: "postgres"
+    ports:
+      - '80:5000'
+    command: gunicorn --bind 0.0.0.0:5000 app:app
+    restart: always
+    depends_on:
+      - pg
+
+  pg:
+    image: postgres # use latest official postgres version
+    env_file:
+      - postgres.env # configure postgres
+    ports:
+      - 5432:5432

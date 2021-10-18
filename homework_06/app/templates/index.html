@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title -%}
+  Home
+{%- endblock %}
+
+{% block body %}
+    {% for user in users %}
+        <li>
+            {{ user.id }} # {{ user.name }}
+        </li>
+    {% endfor %}
+<a href="{{ url_for('loads') }}">Loads Data</a>
+{% endblock %}
