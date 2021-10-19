@@ -1,5 +1,6 @@
+### bookmark**Домашнее задание и проектная работа выполнена для курса "[Python Basic](https://otus.ru/lessons/subd/?int_source=courses_catalog&int_term=operations)"**
+![OTUS](https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fotus.ru%2Fstatic%2Fimg%2Ffavicons%2Fandroid-chrome-537x240.jpg%3Fnocache)
 # Самостоятельная работа по курсу Python Basic
-
 
 ## Подготовка репозитория для сдачи домашних заданий
 - создайте новую папку, где будете хранить решения домашних заданий
