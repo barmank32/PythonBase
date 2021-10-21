@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Animals List View</h1>
+<ul>
+    {% for obj in object_list %}
+        <li>Name: {{ obj.name }} <a href="{% url 'animal-detail' obj.pk %}">Detail</a> </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
